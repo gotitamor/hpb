@@ -3,100 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Cumpleaños</title>
-    
-    <!-- Incluir la fuente Chakra Petch -->
+    <title>feliz cumpleaños</title>
+    <!-- Fuente Chakra Petch de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+    <!-- Incluir Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        /* Aplicar la fuente Chakra Petch */
         body {
-            font-family: 'Chakra Petch', sans-serif;
+            background-color: #8A2BE2; /* Fondo lila */
+            font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
         }
-
-        /* Fondo lila */
-        body {
-            background-color: #b19cd9;
-        }
-
-        /* Estilo de la ventana central */
+        /* Estilo de la ventana retro */
         .window {
-            background-color: #f9f3f3;
-            border: 2px solid #e5e7eb;
-            width: 600px;
-            height: 400px;
+            background-color: #D3D3D3;
+            border: 2px solid #000;
+            width: 550px;
+            height: 350px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            box-shadow: 3px 3px 0px #000;
         }
-
-        .window-header {
-            background-color: #ffc0cb;
+        /* Barra de título retro */
+        .window-title {
+            background-color: #FFB6C1;
             padding: 10px;
-            color: black;
-            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
             text-align: left;
+            border-bottom: 2px solid #000;
         }
-
+        /* Contenido de la ventana */
+        .window-content {
+            padding: 15px;
+            text-align: center;
+        }
+        /* Estilo de los iconos */
         .icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
         }
-        
-        /* Centrando los íconos */
-        .icons-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+        /* Posición de los iconos, como en la imagen */
+        .icon-container {
+            position: absolute;
+            top: 20%;
+            left: 10%;
         }
-        
     </style>
 </head>
 <body>
-    
-    <!-- Ventana central -->
-    <div class="window">
-        <div class="window-header">feliz cumpleaños</div>
-        <!-- Video autoplay -->
-        <video autoplay muted controls class="w-full h-full">
-            <source src="ruta/del/video.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </div>
-
-    <!-- Iconos debajo del video -->
-    <div class="icons-container">
-        <!-- Icono GetoGame -->
+    <!-- Contenedor para los iconos en la izquierda -->
+    <div class="icon-container">
+        <!-- Iconos con enlaces -->
         <a href="https://getolovesyou.carrd.co/" target="_blank">
-            <img src="https://i.ibb.co/4fNvdm4" alt="GetoGame" class="icon">
-            <p class="text-center">GetoGame</p>
+            <img src="/mnt/data/asas.png" alt="GetoGame" class="icon">
         </a>
-
-        <!-- Icono Images -->
         <a href="https://libretitadeamor.carrd.co/" target="_blank">
-            <img src="https://i.ibb.co/y5r2hzN" alt="Images" class="icon">
-            <p class="text-center">Images</p>
+            <img src="/mnt/data/asas.png" alt="Images" class="icon">
         </a>
-
-        <!-- Icono Poemario -->
         <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
-            <img src="https://i.ibb.co/1nWW6sc" alt="Poemario" class="icon">
-            <p class="text-center">Poemario</p>
+            <img src="/mnt/data/asas.png" alt="Poemario" class="icon">
         </a>
-
-        <!-- Icono Notitas -->
         <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-            <img src="https://i.ibb.co/NtGq4B9" alt="Notitas" class="icon">
-            <p class="text-center">Notitas</p>
+            <img src="/mnt/data/asas.png" alt="Notitas" class="icon">
         </a>
     </div>
-    
+
+    <!-- Ventana retro con video -->
+    <div class="window">
+        <!-- Barra de título -->
+        <div class="window-title">
+            feliz cumpleaños
+        </div>
+        <!-- Contenido de la ventana: Video -->
+        <div class="window-content">
+            <video width="500" height="250" autoplay muted loop>
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+    </div>
 </body>
 </html>
