@@ -15,25 +15,20 @@
             background-color: #FFFFFF; /* Fondo blanco */
             font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
             display: flex;
-            min-height: 100vh;
+            justify-content: center; /* Centrar contenido horizontalmente */
+            align-items: center; /* Centrar contenido verticalmente */
+            min-height: 100vh; /* Altura mínima de la ventana */
             margin: 0;
             padding: 20px; /* Espaciado alrededor */
-        }
-        /* Contenedor principal para íconos y ventana */
-        .container {
-            display: flex;
-            justify-content: center; /* Centrar el contenido */
-            width: 100%; /* Ancho completo */
         }
         /* Estilo de la ventana retro */
         .window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 600px; /* Aumentar el ancho de la ventana */
-            height: 350px; /* Aumentar la altura de la ventana */
+            width: 600px; /* Ancho de la ventana */
+            height: 350px; /* Altura de la ventana */
             position: relative;
             box-shadow: 3px 3px 0px #000;
-            margin-left: 20px; /* Espacio entre íconos y ventana */
         }
         /* Barra de título retro */
         .window-title {
@@ -72,20 +67,24 @@
         .icon {
             width: 50px;
             height: 50px;
-            margin: 5px; /* Reducir margen para que estén más juntos */
+            margin: 5px; /* Margen reducido para que estén más juntos */
             cursor: pointer;
         }
         /* Posición de los iconos en filas de tres */
         .icon-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-            gap: 10px; /* Reducir espacio entre columnas */
+            gap: 10px; /* Espacio entre columnas */
         }
         /* Estilo del nombre de los iconos en gris oscuro */
         .icon-name {
             color: #333333; /* Gris oscuro */
             font-size: 12px;
             text-align: center;
+        }
+        /* Posición de íconos destacados */
+        .highlight {
+            transform: translateY(-5px); /* Elevar ligeramente */
         }
     </style>
 </head>
@@ -94,19 +93,19 @@
         <!-- Contenedor para los iconos en filas de tres -->
         <div class="icon-grid">
             <!-- Iconos con nombres y enlaces -->
-            <div>
+            <div class="highlight">
                 <a href="https://getolovesyou.carrd.co/" target="_blank">
                     <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="Enlace a GetoGame" class="icon">
                 </a>
                 <div class="icon-name">GetoGame</div>
             </div>
-            <div>
+            <div class="highlight">
                 <a href="https://libretitadeamor.carrd.co/" target="_blank">
                     <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Enlace a Imágenes" class="icon">
                 </a>
                 <div class="icon-name">Imágenes</div>
             </div>
-            <div>
+            <div class="highlight">
                 <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
                     <img src="https://i.ibb.co/LP775QK/20241022-164453.png" alt="Enlace a Poemario" class="icon">
                 </a>
@@ -144,7 +143,7 @@
             </div>
             <!-- Contenido de la ventana: Video -->
             <div class="window-content">
-                <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview?autoplay=1" width="600" height="350" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="600" height="350" allow></iframe>
             </div>
         </div>
     </div>
