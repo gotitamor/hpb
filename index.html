@@ -27,8 +27,10 @@
             border: 2px solid #000;
             width: 600px; /* Ancho de la ventana */
             height: 350px; /* Altura de la ventana */
-            position: relative;
-            margin-left: 20px; /* Espacio a la izquierda de la ventana */
+            position: absolute; /* Cambio a absolute para centrar */
+            top: 50%; /* Centrando verticalmente */
+            left: 50%; /* Centrando horizontalmente */
+            transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
         /* Barra de título retro */
@@ -63,6 +65,10 @@
         .window-content {
             padding: 15px;
             text-align: center;
+            height: 100%; /* Altura completa */
+            display: flex; /* Para centrar el video */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
         }
         /* Estilo de los iconos */
         .icon {
@@ -142,7 +148,7 @@
         </div>
         <!-- Contenido de la ventana: Video -->
         <div class="window-content">
-            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="600" height="350"></iframe>
+            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="580" height="320" frameborder="0"></iframe>
         </div>
     </div>
 </body>
