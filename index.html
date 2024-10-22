@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #8A2BE2; /* Fondo lila */
+            background-color: #FFFFFF; /* Fondo blanco */
             font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
         }
         /* Estilo de la ventana retro */
@@ -29,12 +29,31 @@
         }
         /* Barra de título retro */
         .window-title {
-            background-color: #FFB6C1;
-            padding: 10px;
+            background-color: #D8BFD8; /* Lila pastel */
+            padding: 5px; /* Barra más delgada */
             font-weight: bold;
+            font-size: 14px; /* Tamaño de texto más pequeño */
             color: #000;
             text-align: left;
             border-bottom: 2px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* Botones de cerrar y minimizar */
+        .window-controls {
+            display: flex;
+            gap: 5px;
+        }
+        .window-control {
+            width: 15px;
+            height: 15px;
+            background-color: #FF6347; /* Color para el botón cerrar */
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .window-control.minimize {
+            background-color: #FFD700; /* Color para el botón minimizar */
         }
         /* Contenido de la ventana */
         .window-content {
@@ -59,26 +78,36 @@
 <body>
     <!-- Contenedor para los iconos en la izquierda -->
     <div class="icon-container">
-        <!-- Iconos con enlaces -->
+        <!-- Iconos con enlaces actualizados -->
         <a href="https://getolovesyou.carrd.co/" target="_blank">
-            <img src="/mnt/data/asas.png" alt="GetoGame" class="icon">
+            <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="GetoGame" class="icon">
         </a>
         <a href="https://libretitadeamor.carrd.co/" target="_blank">
-            <img src="/mnt/data/asas.png" alt="Images" class="icon">
+            <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Images" class="icon">
         </a>
         <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
-            <img src="/mnt/data/asas.png" alt="Poemario" class="icon">
+            <img src="https://i.ibb.co/LP775QK/20241022-164453.png" alt="Poemario" class="icon">
         </a>
         <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-            <img src="/mnt/data/asas.png" alt="Notitas" class="icon">
+            <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Notitas" class="icon">
+        </a>
+        <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
+            <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Cupones" class="icon">
+        </a>
+        <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
+            <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Unknow" class="icon">
         </a>
     </div>
 
     <!-- Ventana retro con video -->
     <div class="window">
-        <!-- Barra de título -->
+        <!-- Barra de título con controles -->
         <div class="window-title">
             feliz cumpleaños
+            <div class="window-controls">
+                <div class="window-control minimize"></div>
+                <div class="window-control"></div>
+            </div>
         </div>
         <!-- Contenido de la ventana: Video -->
         <div class="window-content">
