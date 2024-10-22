@@ -15,8 +15,8 @@
             background-color: #FFFFFF; /* Fondo blanco */
             font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
             display: flex;
-            justify-content: center; /* Centrar contenido horizontalmente */
-            align-items: center; /* Centrar contenido verticalmente */
+            justify-content: flex-start; /* Alinear a la izquierda */
+            align-items: flex-start; /* Alinear en la parte superior */
             min-height: 100vh; /* Altura mínima de la ventana */
             margin: 0;
             padding: 20px; /* Espaciado alrededor */
@@ -28,6 +28,7 @@
             width: 600px; /* Ancho de la ventana */
             height: 350px; /* Altura de la ventana */
             position: relative;
+            margin-left: 20px; /* Espacio a la izquierda de la ventana */
             box-shadow: 3px 3px 0px #000;
         }
         /* Barra de título retro */
@@ -74,7 +75,7 @@
         .icon-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-            gap: 10px; /* Espacio entre columnas */
+            gap: 5px; /* Espacio entre columnas */
         }
         /* Estilo del nombre de los iconos en gris oscuro */
         .icon-name {
@@ -84,67 +85,64 @@
         }
         /* Posición de íconos destacados */
         .highlight {
-            transform: translateY(-5px); /* Elevar ligeramente */
+            transform: translateY(-3px); /* Elevar ligeramente */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Contenedor para los iconos en filas de tres -->
-        <div class="icon-grid">
-            <!-- Iconos con nombres y enlaces -->
-            <div class="highlight">
-                <a href="https://getolovesyou.carrd.co/" target="_blank">
-                    <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="Enlace a GetoGame" class="icon">
-                </a>
-                <div class="icon-name">GetoGame</div>
-            </div>
-            <div class="highlight">
-                <a href="https://libretitadeamor.carrd.co/" target="_blank">
-                    <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Enlace a Imágenes" class="icon">
-                </a>
-                <div class="icon-name">Imágenes</div>
-            </div>
-            <div class="highlight">
-                <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
-                    <img src="https://i.ibb.co/LP775QK/20241022-164453.png" alt="Enlace a Poemario" class="icon">
-                </a>
-                <div class="icon-name">Poemario</div>
-            </div>
-            <div>
-                <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-                    <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Enlace a Notitas" class="icon">
-                </a>
-                <div class="icon-name">Notitas</div>
-            </div>
-            <div>
-                <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
-                    <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Enlace a Cupones" class="icon">
-                </a>
-                <div class="icon-name">Cupones</div>
-            </div>
-            <div>
-                <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
-                    <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Enlace a Unknow" class="icon">
-                </a>
-                <div class="icon-name">Unknow</div>
+    <div class="icon-grid">
+        <!-- Iconos con nombres y enlaces -->
+        <div class="highlight">
+            <a href="https://getolovesyou.carrd.co/" target="_blank">
+                <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="Enlace a GetoGame" class="icon">
+            </a>
+            <div class="icon-name">GetoGame</div>
+        </div>
+        <div class="highlight">
+            <a href="https://libretitadeamor.carrd.co/" target="_blank">
+                <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Enlace a Imágenes" class="icon">
+            </a>
+            <div class="icon-name">Imágenes</div>
+        </div>
+        <div class="highlight">
+            <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
+                <img src="https://i.ibb.co/LP775QK/20241022-164453.png" alt="Enlace a Poemario" class="icon">
+            </a>
+            <div class="icon-name">Poemario</div>
+        </div>
+        <div>
+            <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
+                <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Enlace a Notitas" class="icon">
+            </a>
+            <div class="icon-name">Notitas</div>
+        </div>
+        <div>
+            <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
+                <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Enlace a Cupones" class="icon">
+            </a>
+            <div class="icon-name">Cupones</div>
+        </div>
+        <div>
+            <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
+                <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Enlace a Unknow" class="icon">
+            </a>
+            <div class="icon-name">Unknow</div>
+        </div>
+    </div>
+
+    <!-- Ventana retro con video -->
+    <div class="window">
+        <!-- Barra de título con controles -->
+        <div class="window-title">
+            Feliz Cumpleaños
+            <div class="window-controls">
+                <div class="window-control minimize"></div>
+                <div class="window-control"></div>
             </div>
         </div>
-
-        <!-- Ventana retro con video -->
-        <div class="window">
-            <!-- Barra de título con controles -->
-            <div class="window-title">
-                Feliz Cumpleaños
-                <div class="window-controls">
-                    <div class="window-control minimize"></div>
-                    <div class="window-control"></div>
-                </div>
-            </div>
-            <!-- Contenido de la ventana: Video -->
-            <div class="window-content">
-                <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="600" height="350" allow></iframe>
-            </div>
+        <!-- Contenido de la ventana: Video -->
+        <div class="window-content">
+            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="600" height="350"></iframe>
         </div>
     </div>
 </body>
