@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feliz cumpleaños</title>
+    <title>Feliz Cumpleaños</title>
     <!-- Fuente Chakra Petch de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,17 +14,24 @@
         body {
             background-color: #FFFFFF; /* Fondo blanco */
             font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px; /* Agregado para espaciar el contenido */
+        }
+        /* Contenedor principal para íconos y ventana */
+        .container {
+            display: flex;
+            justify-content: space-between; /* Espacio entre íconos y ventana */
+            width: 100%; /* Ancho completo */
         }
         /* Estilo de la ventana retro */
         .window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 550px;
-            height: 350px;
-            position: absolute;
-            top: 50%;
-            left: 40%; /* Mover un poco más a la izquierda */
-            transform: translate(-50%, -50%);
+            width: 500px; /* Ancho igual al video */
+            height: 250px; /* Altura igual al video */
+            position: relative;
             box-shadow: 3px 3px 0px #000;
         }
         /* Barra de título retro */
@@ -70,9 +77,8 @@
         /* Posición de los iconos en filas de tres */
         .icon-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
             gap: 20px;
-            justify-items: center;
         }
         /* Estilo del nombre de los iconos en gris oscuro */
         .icon-name {
@@ -83,61 +89,18 @@
     </style>
 </head>
 <body>
-    <!-- Contenedor para los iconos en filas de tres -->
-    <div class="icon-grid">
-        <!-- Iconos con nombres y enlaces actualizados -->
-        <div>
-            <a href="https://getolovesyou.carrd.co/" target="_blank">
-                <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="GetoGame" class="icon">
-            </a>
-            <div class="icon-name">GetoGame</div>
-        </div>
-        <div>
-            <a href="https://libretitadeamor.carrd.co/" target="_blank">
-                <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Images" class="icon">
-            </a>
-            <div class="icon-name">Images</div>
-        </div>
-        <div>
-            <a href="https://heyzine.com/flip-book/b7de21a9e0.html#page/1" target="_blank">
-                <img src="https://i.ibb.co/LP775QK/20241022-164453.png" alt="Poemario" class="icon">
-            </a>
-            <div class="icon-name">Poemario</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-                <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Notitas" class="icon">
-            </a>
-            <div class="icon-name">Notitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
-                <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Cupones" class="icon">
-            </a>
-            <div class="icon-name">Cupones</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
-                <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Unknow" class="icon">
-            </a>
-            <div class="icon-name">Unknow</div>
-        </div>
-    </div>
-
-    <!-- Ventana retro con video -->
-    <div class="window">
-        <!-- Barra de título con controles -->
-        <div class="window-title">
-            feliz cumpleaños
-            <div class="window-controls">
-                <div class="window-control minimize"></div>
-                <div class="window-control"></div>
+    <div class="container">
+        <!-- Contenedor para los iconos en filas de tres -->
+        <div class="icon-grid">
+            <!-- Iconos con nombres y enlaces -->
+            <div>
+                <a href="https://getolovesyou.carrd.co/" target="_blank">
+                    <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="Enlace a GetoGame" class="icon">
+                </a>
+                <div class="icon-name">GetoGame</div>
             </div>
-        </div>
-        <!-- Contenido de la ventana: Video -->
-        <div class="window-content">
-            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="500" height="250" allow="autoplay"></iframe>
-        </div>
-    </div>
-</body>
-</html>
+            <div>
+                <a href="https://libretitadeamor.carrd.co/" target="_blank">
+                    <img src="https://i.ibb.co/DkZdGB1/Messenger-creation-1-CD008-A3-C33-D-4261-8266-29348-F4-BA962-removebg-preview.png" alt="Enlace a Imágenes" class="icon">
+                </a>
+                <div class
