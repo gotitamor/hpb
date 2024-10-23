@@ -4,67 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Cumpleaños</title>
-    <!-- Fuente Chakra Petch de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Incluir Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #FFFFFF; /* Fondo blanco */
-            font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
+            background-color: #FFFFFF;
+            font-family: 'Chakra Petch', sans-serif;
             display: flex;
-            justify-content: flex-start; /* Alinear a la izquierda */
-            align-items: flex-start; /* Alinear en la parte superior */
-            min-height: 100vh; /* Altura mínima de la ventana */
+            justify-content: flex-start;
+            align-items: flex-start;
+            min-height: 100vh;
             margin: 0;
-            padding: 40px 20px; /* Espaciado alrededor (mueve todo hacia abajo) */
+            padding: 40px 20px;
         }
-        /* Estilo de la barra de tareas */
         .taskbar {
-            background-color: #D8BFD8; /* Color lila */
-            width: 100%; /* Abarcar toda la anchura */
-            padding: 2px; /* Espaciado interno reducido */
-            position: absolute; /* Posición absoluta para que esté en la parte superior */
-            top: 0; /* Colocar en la parte superior */
-            left: 0; /* Alinear a la izquierda */
+            background-color: #D8BFD8;
+            width: 100%;
+            padding: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: flex;
-            justify-content: space-between; /* Espacio entre los elementos */
-            align-items: center; /* Centrar verticalmente */
-            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
-            border: 1px solid #000; /* Borde delgado negro */
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            border: 1px solid #000;
         }
-        /* Estilo de la ventana retro */
         .window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 600px; /* Ancho de la ventana de cumpleaños */
-            height: 380px; /* Altura de la ventana ajustada */
-            position: absolute; /* Cambio a absolute para centrar */
-            top: 50%; /* Centrando verticalmente */
-            left: calc(50% - 320px); /* Ubicar más a la izquierda */
-            transform: translate(-50%, -50%); /* Ajustar para el centro */
+            width: 600px;
+            height: 380px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             box-shadow: 3px 3px 0px #000;
         }
-        /* Estilo de la ventana pequeña */
         .small-window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 400px; /* Ancho de la ventana de imagen ajustado */
-            height: 300px; /* Altura de la ventana de imagen ajustada */
-            position: absolute; /* Cambio a absolute para centrar */
-            top: calc(50% - 200px); /* Ubicar un poco más arriba */
-            left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
-            transform: translate(-50%, -50%); /* Ajustar para el centro */
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: calc(50% + 250px); /* Ajustar la posición más abajo */
+            left: 50%;
+            transform: translate(-50%, -50%);
             box-shadow: 3px 3px 0px #000;
         }
-        /* Barra de título retro */
         .window-title {
-            background-color: #D8BFD8; /* Lila pastel */
+            background-color: #D8BFD8;
             padding: 5px;
             font-weight: bold;
-            font-size: 12px; /* Tamaño de fuente ajustado */
+            font-size: 12px;
             color: #000;
             text-align: left;
             border-bottom: 2px solid #000;
@@ -72,7 +66,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        /* Botones de cerrar y minimizar */
         .window-controls {
             display: flex;
             gap: 5px;
@@ -80,93 +73,74 @@
         .window-control {
             width: 15px;
             height: 15px;
-            background-color: #FF6347; /* Color para el botón cerrar */
+            background-color: #FF6347;
             border-radius: 50%;
             cursor: pointer;
         }
         .window-control.minimize {
-            background-color: #FFD700; /* Color para el botón minimizar */
+            background-color: #FFD700;
         }
-        /* Contenido de la ventana */
         .window-content, .small-window-content {
             padding: 15px;
             text-align: center;
-            height: 100%; /* Altura completa */
-            display: flex; /* Para centrar el video o imagen */
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        /* Estilo de los iconos */
         .icon {
             width: 50px;
             height: 50px;
-            margin: 5px; /* Margen reducido para que estén más juntos */
+            margin: 5px;
             cursor: pointer;
         }
-        /* Posición de los iconos en filas de tres */
         .icon-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-            gap: 5px; /* Espacio entre columnas */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
         }
-        /* Estilo del nombre de los iconos en gris oscuro */
         .icon-name {
-            color: #333333; /* Gris oscuro */
+            color: #333333;
             font-size: 12px;
             text-align: center;
         }
-        /* Posición de íconos destacados */
-        .highlight {
-            transform: translateY(-3px); /* Elevar ligeramente */
-        }
 
-        /* Media Queries para Responsividad */
         @media (max-width: 768px) {
+            .window, .small-window {
+                position: static; /* Desactivar el posicionamiento absoluto en móvil */
+                margin: 20px auto; /* Centrarlas verticalmente */
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+                transform: none; /* No aplicar transformaciones en móviles */
+            }
+            .window + .small-window {
+                margin-top: 20px; /* Separar las ventanas entre sí */
+            }
             .taskbar {
-                padding: 1px; /* Espaciado interno reducido en móviles */
-            }
-            .taskbar div {
-                font-size: 10px; /* Tamaño de fuente más pequeño en móviles */
-            }
-            .window {
-                width: 90%; /* Ventana más ancha en móviles */
-                height: auto; /* Altura automática */
-                max-width: 400px; /* Ancho máximo para dispositivos móviles */
-            }
-            .small-window {
-                width: 90%; /* Ventana más ancha en móviles */
-                height: auto; /* Altura automática */
-                max-width: 400px; /* Ancho máximo para dispositivos móviles */
+                padding: 1px;
             }
             .window-content iframe, .small-window-content img {
-                width: 100%; /* Video ocupa todo el ancho de la ventana */
-                height: auto; /* Altura automática para el video */
+                width: 100%;
+                height: auto;
             }
             .icon {
-                width: 40px; /* Reducir el tamaño de los iconos en móvil */
+                width: 40px;
                 height: 40px;
             }
             .icon-name {
-                font-size: 10px; /* Tamaño de fuente más pequeño en móvil */
-            }
-            .icon-grid {
-                grid-template-columns: repeat(3, 1fr); /* Mantener tres columnas */
-                justify-items: center; /* Centrar los iconos en cada celda */
-                gap: 10px; /* Espacio entre filas */
-                text-align: center; /* Centrar texto en cada celda */
+                font-size: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Barra de tareas superior -->
     <div class="taskbar">
         <div>becker</div>
         <div>| Fullscreen | 30 Oct</div>
     </div>
 
     <div class="icon-grid">
-        <!-- Iconos con nombres y enlaces -->
         <div class="highlight">
             <a href="https://getolovesyou.carrd.co/" target="_blank">
                 <img src="https://i.ibb.co/MhNw62P/20241022-164317.png" alt="Enlace a GetoGame" class="icon">
@@ -185,29 +159,9 @@
             </a>
             <div class="icon-name">Poemario</div>
         </div>
-        <div>
-            <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-                <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Enlace a Notitas" class="icon">
-            </a>
-            <div class="icon-name">Notitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
-                <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Enlace a Cartitas" class="icon">
-            </a>
-            <div class="icon-name">Cartitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
-                <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Enlace a Unknow" class="icon">
-            </a>
-            <div class="icon-name">Unknow</div>
-        </div>
     </div>
 
-    <!-- Ventana retro con video -->
     <div class="window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
             Feliz Cumpleaños
             <div class="window-controls">
@@ -215,25 +169,20 @@
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Video -->
         <div class="window-content">
             <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="100%" height="80%" frameborder="0"></iframe>
         </div>
     </div>
 
-    <!-- Nueva ventana con imagen -->
     <div class="small-window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
-            <!-- Sin texto -->
             <div class="window-controls">
                 <div class="window-control minimize"></div>
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Imagen -->
         <div class="small-window-content">
-            <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="90%" height="auto"> <!-- Ajustar ancho de la imagen -->
+            <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="90%" height="auto">
         </div>
     </div>
 </body>
