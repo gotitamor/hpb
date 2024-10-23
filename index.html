@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
         .taskbar {
             background-color: #D8BFD8; /* Color lila */
             width: 100%; /* Abarcar toda la anchura */
-            padding: 3px; /* Espaciado interno reducido */
+            padding: 2px; /* Espaciado interno reducido */
             position: absolute; /* Posición absoluta para que esté en la parte superior */
             top: 0; /* Colocar en la parte superior */
             left: 0; /* Alinear a la izquierda */
@@ -109,6 +109,12 @@
 
         /* Media Queries para Responsividad */
         @media (max-width: 768px) {
+            .taskbar {
+                padding: 1px; /* Espaciado interno reducido en móviles */
+            }
+            .taskbar div {
+                font-size: 10px; /* Tamaño de fuente más pequeño en móviles */
+            }
             .window {
                 width: 90%; /* Ventana más ancha en móviles */
                 height: auto; /* Altura automática */
