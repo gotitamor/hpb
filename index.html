@@ -93,6 +93,26 @@
         .highlight {
             transform: translateY(-3px); /* Elevar ligeramente */
         }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            .window {
+                width: 90%; /* Ventana más ancha en móviles */
+                height: auto; /* Altura automática */
+                max-width: 400px; /* Ancho máximo para dispositivos móviles */
+            }
+            .window-content iframe {
+                width: 100%; /* Video ocupa todo el ancho de la ventana */
+                height: auto; /* Altura automática para el video */
+            }
+            .icon {
+                width: 40px; /* Reducir el tamaño de los iconos en móvil */
+                height: 40px;
+            }
+            .icon-name {
+                font-size: 10px; /* Tamaño de fuente más pequeño en móvil */
+            }
+        }
     </style>
 </head>
 <body>
