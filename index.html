@@ -40,7 +40,7 @@
             background-color: #D3D3D3;
             border: 2px solid #000;
             width: 600px; /* Ancho de la ventana de cumpleaños */
-            height: 200px; /* Altura de la ventana ajustada */
+            height: 400px; /* Altura de la ventana ajustada */
             position: absolute; /* Cambio a absolute para centrar */
             top: 50%; /* Centrando verticalmente */
             left: calc(50% - 320px); /* Ubicar más a la izquierda */
@@ -87,14 +87,19 @@
         .window-control.minimize {
             background-color: #FFD700; /* Color para el botón minimizar */
         }
-        /* Contenido de la ventana */
+  /* Contenido de la ventana */
         .window-content, .small-window-content {
-            padding: 10px;
-            text-align: center;
-            height: calc(100% - 40px); /* Altura completa */
+            padding: 0; /* Sin padding para ajustar imagen al borde */
+            height: calc(100% - 20px); /* Altura completa menos barra de título */
             display: flex; /* Para centrar el video o imagen */
             justify-content: center; /* Centrar horizontalmente */
             align-items: center; /* Centrar verticalmente */
+        }
+        /* Estilo de la imagen en la ventana pequeña */
+        .small-window-content img {
+            width: calc(100% - 10px); /* Ancho de la imagen respetando bordes */
+            height: calc(100% - 10px); /* Altura de la imagen respetando bordes */
+            object-fit: cover; /* Ajustar imagen para cubrir sin desbordar */
         }
         /* Estilo de los iconos */
         .icon {
