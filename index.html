@@ -51,10 +51,10 @@
         .small-window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 500px; /* Ancho de la ventana pequeña */
-            height: 280px; /* Altura de la ventana pequeña */
+            width: 600px; /* Ancho de la ventana de imagen ajustado */
+            height: 380px; /* Altura de la ventana de imagen ajustada */
             position: absolute; /* Cambio a absolute para centrar */
-            top: calc(50% - 170px); /* Ubicar un poco más arriba */
+            top: calc(50% - 190px); /* Ubicar un poco más arriba */
             left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
@@ -94,7 +94,7 @@
             height: 100%; /* Altura completa */
             display: flex; /* Para centrar el video o imagen */
             justify-content: center; /* Centrar horizontalmente */
-            align-items: flex-start; /* Alinear hacia arriba */
+            align-items: center; /* Centrar verticalmente */
         }
         /* Estilo de los iconos */
         .icon {
@@ -134,9 +134,9 @@
                 max-width: 400px; /* Ancho máximo para dispositivos móviles */
             }
             .small-window {
-                width: 80%; /* Ventana más ancha en móviles */
+                width: 90%; /* Ventana más ancha en móviles */
                 height: auto; /* Altura automática */
-                max-width: 360px; /* Ancho máximo para dispositivos móviles */
+                max-width: 400px; /* Ancho máximo para dispositivos móviles */
             }
             .window-content iframe, .small-window-content img {
                 width: 100%; /* Video ocupa todo el ancho de la ventana */
@@ -217,11 +217,11 @@
         </div>
         <!-- Contenido de la ventana: Video -->
         <div class="window-content">
-            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="580" height="320" frameborder="0"></iframe>
+            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
 
-    <!-- Nueva ventana pequeña con imagen -->
+    <!-- Nueva ventana con imagen -->
     <div class="small-window">
         <!-- Barra de título con controles -->
         <div class="window-title">
@@ -238,4 +238,3 @@
     </div>
 </body>
 </html>
-
