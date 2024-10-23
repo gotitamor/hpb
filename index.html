@@ -89,12 +89,23 @@
         }
         /* Contenido de la ventana */
         .window-content, .small-window-content {
-            padding: 15px;
-            text-align: center;
-            height: 100%; /* Altura completa */
+            padding: 0; /* Sin padding para maximizar espacio */
+            height: calc(100% - 30px); /* Ajustar altura para que respete el borde */
             display: flex; /* Para centrar el video o imagen */
             justify-content: center; /* Centrar horizontalmente */
             align-items: center; /* Centrar verticalmente */
+        }
+        /* Ajuste del video */
+        .window-content iframe {
+            width: 100%; /* Video ocupa todo el ancho de la ventana */
+            height: 100%; /* Video ocupa toda la altura de la ventana */
+            border: none; /* Sin borde para que se vea bien */
+        }
+        /* Ajuste de la imagen */
+        .small-window-content img {
+            max-width: 100%; /* Imagen no sobresale del ancho de la ventana */
+            max-height: 100%; /* Imagen no sobresale de la altura de la ventana */
+            object-fit: cover; /* Mantiene la relación de aspecto */
         }
         /* Estilo de los iconos */
         .icon {
@@ -137,10 +148,6 @@
                 width: 90%; /* Ventana más ancha en móviles */
                 height: auto; /* Altura automática */
                 max-width: 400px; /* Ancho máximo para dispositivos móviles */
-            }
-            .window-content iframe, .small-window-content img {
-                width: 100%; /* Video ocupa todo el ancho de la ventana */
-                height: auto; /* Altura automática para el video */
             }
             .icon {
                 width: 40px; /* Reducir el tamaño de los iconos en móvil */
@@ -185,55 +192,33 @@
             </a>
             <div class="icon-name">Poemario</div>
         </div>
-        <div>
-            <a href="https://app.sane.fyi/notitasdeamor/a00cc466-4d58-11ef-9143-4323dc71136e" target="_blank">
-                <img src="https://i.ibb.co/0mzLwbC/20241022-164644.png" alt="Enlace a Notitas" class="icon">
-            </a>
-            <div class="icon-name">Notitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
-                <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Enlace a Cartitas" class="icon">
-            </a>
-            <div class="icon-name">Cartitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
-                <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Enlace a Unknow" class="icon">
-            </a>
-            <div class="icon-name">Unknow</div>
-        </div>
     </div>
 
-    <!-- Ventana retro con video -->
+    <!-- Ventana de video -->
     <div class="window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
-            Feliz Cumpleaños
+            <span>Feliz Cumpleaños</span>
             <div class="window-controls">
                 <div class="window-control minimize"></div>
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Video -->
         <div class="window-content">
-            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="100%" height="80%" frameborder="0"></iframe>
+            <iframe src="https://www.youtube.com/embed/q4G1t9LxDoM" allowfullscreen></iframe>
         </div>
     </div>
 
-    <!-- Nueva ventana con imagen -->
+    <!-- Ventana de imagen -->
     <div class="small-window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
-            <!-- Sin texto -->
+            <span>Feliz Cumpleaños 2</span>
             <div class="window-controls">
                 <div class="window-control minimize"></div>
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Imagen -->
         <div class="small-window-content">
-            <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="90%" height="auto"> <!-- Ajustar ancho de la imagen -->
+            <img src="https://i.ibb.co/3RvwDLZ/just-a-nice-picture-2024-10-21-165234.png" alt="Feliz Cumpleaños">
         </div>
     </div>
 </body>
