@@ -36,28 +36,21 @@
             border: 1px solid #000; /* Borde delgado negro */
         }
         /* Estilo de la ventana retro */
-        .window {
+        .window, .small-window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 600px; /* Ancho de la ventana de cumpleaños */
-            height: 380px; /* Altura de la ventana ajustada */
+            width: 600px; /* Ancho de la ventana */
+            height: 400px; /* Altura de la ventana igualada */
             position: absolute; /* Cambio a absolute para centrar */
             top: 50%; /* Centrando verticalmente */
-            left: calc(50% - 320px); /* Ubicar más a la izquierda */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
-        /* Estilo de la ventana pequeña */
+        .window {
+            left: calc(50% - 320px); /* Ajustar la posición de la ventana de video */
+        }
         .small-window {
-            background-color: #D3D3D3;
-            border: 2px solid #000;
-            width: 400px; /* Ancho de la ventana de imagen ajustado */
-            height: 300px; /* Altura de la ventana de imagen ajustada */
-            position: absolute; /* Cambio a absolute para centrar */
-            top: calc(50% - 200px); /* Ubicar un poco más arriba */
-            left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
-            transform: translate(-50%, -50%); /* Ajustar para el centro */
-            box-shadow: 3px 3px 0px #000;
+            left: calc(50% + 320px); /* Ajustar la posición de la ventana de imagen */
         }
         /* Barra de título retro */
         .window-title {
@@ -89,13 +82,19 @@
         }
         /* Contenido de la ventana */
         .window-content, .small-window-content {
-            padding: 15px;
+            padding: 10px; /* Espacio reducido para respetar los bordes */
             text-align: center;
-            height: 100%; /* Altura completa */
+            height: calc(100% - 40px); /* Ajuste para el tamaño del contenido interno */
             display: flex; /* Para centrar el video o imagen */
             justify-content: center; /* Centrar horizontalmente */
             align-items: center; /* Centrar verticalmente */
         }
+        /* Estilo del video y la imagen */
+        iframe, img {
+            width: 100%; /* Abarcar todo el ancho de la ventana */
+            height: 100%; /* Abarcar todo el alto de la ventana */
+        }
+
         /* Estilo de los iconos */
         .icon {
             width: 50px;
@@ -128,19 +127,14 @@
             .taskbar div {
                 font-size: 10px; /* Tamaño de fuente más pequeño en móviles */
             }
-            .window {
-                width: 90%; /* Ventana más ancha en móviles */
-                height: auto; /* Altura automática */
-                max-width: 400px; /* Ancho máximo para dispositivos móviles */
-            }
-            .small-window {
+            .window, .small-window {
                 width: 90%; /* Ventana más ancha en móviles */
                 height: auto; /* Altura automática */
                 max-width: 400px; /* Ancho máximo para dispositivos móviles */
             }
             .window-content iframe, .small-window-content img {
-                width: 100%; /* Video ocupa todo el ancho de la ventana */
-                height: auto; /* Altura automática para el video */
+                width: 100%; /* Video o imagen ocupa todo el ancho de la ventana */
+                height: auto; /* Altura automática para el video o imagen */
             }
             .icon {
                 width: 40px; /* Reducir el tamaño de los iconos en móvil */
@@ -192,22 +186,15 @@
             <div class="icon-name">Notitas</div>
         </div>
         <div>
-            <a href="https://app.sane.fyi/public/74236cee-86b3-11ef-b0a8-1b0c42065b66" target="_blank">
-                <img src="https://i.ibb.co/bLyWhQ5/20241022-164723.png" alt="Enlace a Cartitas" class="icon">
+            <a href="https://www.flickr.com/photos/198478806@N08/albums" target="_blank">
+                <img src="https://i.ibb.co/vY3KSRp/20241022-164734.png" alt="Enlace a Flickr" class="icon">
             </a>
-            <div class="icon-name">Cartitas</div>
-        </div>
-        <div>
-            <a href="https://app.sane.fyi/s/ee42d760-7c3d-11ef-8385-7f91e54135c6?t=vP1cacgddrdIjUVxcYUz" target="_blank">
-                <img src="https://i.ibb.co/YQPmx6J/20241022-164741.png" alt="Enlace a Unknow" class="icon">
-            </a>
-            <div class="icon-name">Unknow</div>
+            <div class="icon-name">Flickr</div>
         </div>
     </div>
 
-    <!-- Ventana retro con video -->
+    <!-- Ventana retro con video incrustado -->
     <div class="window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
             Feliz Cumpleaños
             <div class="window-controls">
@@ -215,25 +202,23 @@
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Video -->
         <div class="window-content">
-            <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="100%" height="80%" frameborder="0"></iframe>
+            <!-- Video embebido -->
+            <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" title="Feliz Cumpleaños" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
-    <!-- Nueva ventana con imagen -->
+    <!-- Ventana retro pequeña con imagen -->
     <div class="small-window">
-        <!-- Barra de título con controles -->
         <div class="window-title">
-            <!-- Sin texto -->
+            Imagen de Ejemplo
             <div class="window-controls">
                 <div class="window-control minimize"></div>
                 <div class="window-control"></div>
             </div>
         </div>
-        <!-- Contenido de la ventana: Imagen -->
         <div class="small-window-content">
-            <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="90%" height="auto"> <!-- Ajustar ancho de la imagen -->
+            <img src="https://i.ibb.co/example-image.png" alt="Imagen de Ejemplo">
         </div>
     </div>
 </body>
