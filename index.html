@@ -39,11 +39,23 @@
         .window {
             background-color: #D3D3D3;
             border: 2px solid #000;
-            width: 600px; /* Ancho de la ventana */
+            width: 600px; /* Ancho de la ventana de cumpleaños */
             height: 380px; /* Altura de la ventana ajustada */
             position: absolute; /* Cambio a absolute para centrar */
             top: 50%; /* Centrando verticalmente */
             left: 50%; /* Centrando horizontalmente */
+            transform: translate(-50%, -50%); /* Ajustar para el centro */
+            box-shadow: 3px 3px 0px #000;
+        }
+        /* Estilo de la ventana pequeña */
+        .small-window {
+            background-color: #D3D3D3;
+            border: 2px solid #000;
+            width: 500px; /* Ancho de la ventana pequeña */
+            height: 280px; /* Altura de la ventana pequeña */
+            position: absolute; /* Cambio a absolute para centrar */
+            top: 50%; /* Centrando verticalmente */
+            left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
@@ -76,7 +88,7 @@
             background-color: #FFD700; /* Color para el botón minimizar */
         }
         /* Contenido de la ventana */
-        .window-content {
+        .window-content, .small-window-content {
             padding: 15px;
             text-align: center;
             height: 100%; /* Altura completa */
@@ -121,7 +133,12 @@
                 height: auto; /* Altura automática */
                 max-width: 400px; /* Ancho máximo para dispositivos móviles */
             }
-            .window-content iframe {
+            .small-window {
+                width: 80%; /* Ventana más ancha en móviles */
+                height: auto; /* Altura automática */
+                max-width: 360px; /* Ancho máximo para dispositivos móviles */
+            }
+            .window-content iframe, .small-window-content img {
                 width: 100%; /* Video ocupa todo el ancho de la ventana */
                 height: auto; /* Altura automática para el video */
             }
@@ -144,7 +161,7 @@
 <body>
     <!-- Barra de tareas superior -->
     <div class="taskbar">
-        <div>Becker</div>
+        <div>becker</div>
         <div>| Fullscreen | 30 Oct</div>
     </div>
 
@@ -201,6 +218,13 @@
         <!-- Contenido de la ventana: Video -->
         <div class="window-content">
             <iframe src="https://drive.google.com/file/d/1tKRTsZon6ulW41rjThzTwJY7buZ4th-O/preview" width="580" height="320" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Nueva ventana pequeña con imagen -->
+    <div class="small-window">
+        <div class="small-window-content">
+            <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="100%" height="auto">
         </div>
     </div>
 </body>
