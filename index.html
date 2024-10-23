@@ -21,6 +21,19 @@
             margin: 0;
             padding: 40px 20px; /* Espaciado alrededor (mueve todo hacia abajo) */
         }
+        /* Estilo de la barra de tareas */
+        .taskbar {
+            background-color: #D8BFD8; /* Color lila */
+            width: 100%; /* Abarcar toda la anchura */
+            padding: 10px; /* Espaciado interno */
+            position: absolute; /* Posición absoluta para que esté en la parte superior */
+            top: 0; /* Colocar en la parte superior */
+            left: 0; /* Alinear a la izquierda */
+            display: flex;
+            justify-content: space-between; /* Espacio entre los elementos */
+            align-items: center; /* Centrar verticalmente */
+            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+        }
         /* Estilo de la ventana retro */
         .window {
             background-color: #D3D3D3;
@@ -122,6 +135,12 @@
     </style>
 </head>
 <body>
+    <!-- Barra de tareas superior -->
+    <div class="taskbar">
+        <div>becker</div>
+        <div>30 oct</div>
+    </div>
+
     <div class="icon-grid">
         <!-- Iconos con nombres y enlaces -->
         <div class="highlight">
