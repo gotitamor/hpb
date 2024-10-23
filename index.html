@@ -43,7 +43,7 @@
             height: 380px; /* Altura de la ventana ajustada */
             position: absolute; /* Cambio a absolute para centrar */
             top: 50%; /* Centrando verticalmente */
-            left: calc(50% - 320px); /* Ubicar más a la izquierda */
+            left: 50%; /* Centrando horizontalmente */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
@@ -54,8 +54,8 @@
             width: 400px; /* Ancho de la ventana de imagen ajustado */
             height: 300px; /* Altura de la ventana de imagen ajustada */
             position: absolute; /* Cambio a absolute para centrar */
-            top: calc(50% - 200px); /* Ubicar un poco más arriba */
-            left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
+            top: 50%; /* Centrando verticalmente */
+            left: calc(50% + 360px); /* Ubicar al lado de la ventana de cumpleaños */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
@@ -128,19 +128,14 @@
             .taskbar div {
                 font-size: 10px; /* Tamaño de fuente más pequeño en móviles */
             }
-            .window {
-                width: 90%; /* Ventana más ancha en móviles */
-                height: auto; /* Altura automática */
-                max-width: 400px; /* Ancho máximo para dispositivos móviles */
-            }
-            .small-window {
-                width: 90%; /* Ventana más ancha en móviles */
+            .window, .small-window {
+                width: 90%; /* Ventanas más anchas en móviles */
                 height: auto; /* Altura automática */
                 max-width: 400px; /* Ancho máximo para dispositivos móviles */
             }
             .window-content iframe, .small-window-content img {
-                width: 100%; /* Video ocupa todo el ancho de la ventana */
-                height: auto; /* Altura automática para el video */
+                width: 100%; /* Video o imagen ocupan todo el ancho */
+                height: auto; /* Altura automática */
             }
             .icon {
                 width: 40px; /* Reducir el tamaño de los iconos en móvil */
