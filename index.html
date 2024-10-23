@@ -43,7 +43,7 @@
             height: 380px; /* Altura de la ventana ajustada */
             position: absolute; /* Cambio a absolute para centrar */
             top: 50%; /* Centrando verticalmente */
-            left: 50%; /* Centrando horizontalmente */
+            left: calc(50% - 320px); /* Ubicar más a la izquierda */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
@@ -54,7 +54,7 @@
             width: 500px; /* Ancho de la ventana pequeña */
             height: 280px; /* Altura de la ventana pequeña */
             position: absolute; /* Cambio a absolute para centrar */
-            top: 50%; /* Centrando verticalmente */
+            top: calc(50% - 170px); /* Ubicar un poco más arriba */
             left: calc(50% + 320px); /* Ubicar al lado de la ventana de cumpleaños */
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
@@ -92,7 +92,7 @@
             padding: 15px;
             text-align: center;
             height: 100%; /* Altura completa */
-            display: flex; /* Para centrar el video */
+            display: flex; /* Para centrar el video o imagen */
             justify-content: center; /* Centrar horizontalmente */
             align-items: flex-start; /* Alinear hacia arriba */
         }
@@ -223,9 +223,19 @@
 
     <!-- Nueva ventana pequeña con imagen -->
     <div class="small-window">
+        <!-- Barra de título con controles -->
+        <div class="window-title">
+            <!-- Sin texto -->
+            <div class="window-controls">
+                <div class="window-control minimize"></div>
+                <div class="window-control"></div>
+            </div>
+        </div>
+        <!-- Contenido de la ventana: Imagen -->
         <div class="small-window-content">
             <img src="https://i.ibb.co/MBB3W1L/69-sin-t-tulo-1.jpg" alt="Imagen" width="100%" height="auto">
         </div>
     </div>
 </body>
 </html>
+
