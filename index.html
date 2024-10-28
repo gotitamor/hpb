@@ -11,6 +11,21 @@
     <!-- Incluir Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Estilo de la barra de tareas */
+        .taskbar {
+            background-color: #D8BFD8; /* Color lila */
+            width: 100%; /* Abarcar toda la anchura */
+            padding: 2px; /* Espaciado interno reducido */
+            position: absolute; /* Posición absoluta para que esté en la parte superior */
+            top: 0; /* Colocar en la parte superior */
+            left: 0; /* Alinear a la izquierda */
+            display: flex;
+            justify-content: space-between; /* Espacio entre los elementos */
+            align-items: center; /* Centrar verticalmente */
+            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+            border: 1px solid #000; /* Borde delgado negro */
+        }
+
         body {
             background-color: #FFFFFF; /* Fondo blanco */
             font-family: 'Chakra Petch', sans-serif; /* Fuente Chakra Petch */
@@ -20,8 +35,8 @@
             min-height: 100vh; /* Altura mínima de la ventana */
             margin: 0;
             padding: 20px; /* Espaciado alrededor */
- 
         }
+
         /* Estilo de la ventana retro */
         .window {
             background-color: #D3D3D3;
@@ -34,6 +49,7 @@
             transform: translate(-50%, -50%); /* Ajustar para el centro */
             box-shadow: 3px 3px 0px #000;
         }
+
         /* Barra de título retro */
         .window-title {
             background-color: #D8BFD8; /* Lila pastel */
@@ -47,6 +63,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         /* Botones de cerrar y minimizar */
         .window-controls {
             display: flex;
@@ -62,6 +79,7 @@
         .window-control.minimize {
             background-color: #FFD700; /* Color para el botón minimizar */
         }
+
         /* Contenido de la ventana */
         .window-content {
             padding: 15px;
@@ -71,6 +89,7 @@
             justify-content: center; /* Centrar horizontalmente */
             align-items: flex-start; /* Alinear hacia arriba */
         }
+
         /* Estilo de los iconos */
         .icon {
             width: 50px;
@@ -123,6 +142,12 @@
     </style>
 </head>
 <body>
+    <!-- Barra de tareas superior -->
+    <div class="taskbar">
+        <div>becker</div>
+        <div>| Fullscreen | 30 Oct</div>
+    </div>
+
     <div class="icon-grid">
         <!-- Iconos con nombres y enlaces -->
         <div class="highlight">
