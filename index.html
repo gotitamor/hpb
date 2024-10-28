@@ -20,6 +20,20 @@
             min-height: 100vh; /* Altura mínima de la ventana */
             margin: 0;
             padding: 20px; /* Espaciado alrededor */
+  }
+        /* Estilo de la barra de tareas */
+        .taskbar {
+            background-color: #D8BFD8; /* Color lila */
+            width: 100%; /* Abarcar toda la anchura */
+            padding: 2px; /* Espaciado interno reducido */
+            position: absolute; /* Posición absoluta para que esté en la parte superior */
+            top: 0; /* Colocar en la parte superior */
+            left: 0; /* Alinear a la izquierda */
+            display: flex;
+            justify-content: space-between; /* Espacio entre los elementos */
+            align-items: center; /* Centrar verticalmente */
+            z-index: 10; /* Asegurarse de que esté por encima de otros elementos */
+            border: 1px solid #000; /* Borde delgado negro */
         }
         /* Estilo de la ventana retro */
         .window {
